@@ -1,0 +1,7 @@
+_shots/
+.env
+.env.*
+*.log
+node_modules/
+.DS_Store
+Thumbs.db

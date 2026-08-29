@@ -1,0 +1,68 @@
+Map-Tiles — Civilization-2D Pixel-Art Pack
+Stil: 16-bit / SNES, isometrische Hex-Prismen, an die Referenzbilder angelehnt.
+Hintergrund: transparent (RGBA PNG).
+
+Terrain-Kacheln (512x512 px, gleiche Hex-Lage auf der Fläche):
+  grassland.png       Grasland
+  plains.png          Ebenen (goldgelbes Gras)
+  desert.png          Wüste
+  tundra.png          Tundra
+  snow.png            Schnee
+  hills.png           Hügel (erhabenes Grasland mit Felsen)
+  mountain.png        Berg (schneebedeckt)
+  forest.png          Wald (Kiefern auf Grasland)
+  jungle.png          Dschungel
+  marsh.png           Sumpf
+  ocean.png           Meer
+  coast.png           Küste / flaches Wasser
+  lake.png            See
+  river.png           Fluss (durch Grasland)
+  floodplains.png     Überschwemmungsgebiet
+  oasis.png           Oase
+  ice.png             Packeis
+
+Ressourcen-Icons (256x256 px, zum Auflegen auf Kacheln):
+  resource_wheat.png    Weizen
+  resource_gold.png     Gold
+  resource_horses.png   Pferde
+  resource_cattle.png   Rinder
+  resource_fish.png     Fisch
+  resource_stone.png    Stein
+  resource_iron.png     Eisen
+  resource_deer.png     Wild / Hirsch
+  resource_copper.png   Kupfer
+  resource_sheep.png    Schafe
+
+Map-Overlays (512x512, gleiche Hex-Lage):
+  hex_outline.png     dünnes Hex-Gitter
+  hex_hover.png       Hover-Hervorhebung
+  hex_selected.png    Selektion
+  hex_move.png        erreichbare Bewegungsfelder
+  tribal_village.png  Stammesdorf (Map-Feature)
+
+Schichten (Renderer, hinten → vorn):
+  1. Ground-Fill + Varianten _b/_c (anonymes Hex-Top, originale 3D-Seiten)
+  2. blend_{biome}_{dir}.png   Nachbar-Biome sickert über die Kante
+  3. beach_{dir}.png / foam_{dir}.png   Land↔Wasser
+  4. river_center / river_spoke_*
+  5. forest_canopy / jungle_canopy / village
+  6. way_{dirt|sand|snow|wet}_center / _spoke_*
+  7. Ressourcen, Einheiten
+
+Übergänge:
+  bridge.png          Holzbrücke (Legacy-Vollhex)
+  bridge_deck.png     Holzdeck-Overlay auf Fluss-Autotiles
+  mountain_pass.png   Gebirgspass — Berge am Rand, Weg durch die Mitte
+  river_center.png    Flussknoten auf der Hex-Oberseite
+  river_spoke_*.png   Flussarm zur Kante e/ne/nw/w/sw/se — Kanten treffen sich
+  way_center.png      Wegknoten (Legacy)
+  way_spoke_*.png     Wegarm (Legacy)
+  way_{dirt,sand,snow,wet}_*   biomegetönte Wege
+  blend_*_{e,ne,nw,w,sw,se}.png  Biome-Kanten
+  beach_*.png         Sandstrand am Land-Hex
+  foam_*.png          Gischt am Wasser-Hex
+  forest_canopy.png   Kiefern ohne Boden, über Grasland
+  jungle_canopy.png   Dschungel ohne Boden
+
+Noch nicht in diesem Pack:
+  Städte, Distrikte, Verbesserungen (Farm, Mine, Sägewerk), UI.
