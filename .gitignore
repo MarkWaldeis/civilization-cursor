@@ -1,7 +1,9 @@
 _shots/
+node_modules/
+dist/
 .env
 .env.*
+.env.local
 *.log
-node_modules/
 .DS_Store
 Thumbs.db
